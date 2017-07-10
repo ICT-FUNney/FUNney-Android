@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.funney.funney_android.HomeActivity">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="289dp"
+        android:layout_height="146dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="325dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="利用可能コイン："
+        android:textColor="#000000"
+        android:textSize="17sp"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取引履歴"
+        tools:layout_editor_absoluteX="164dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="69dp"
+        android:text="マイニング"
+        app:layout_constraintRight_toLeftOf="@+id/button4"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ヘルプ"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_marginRight="69dp"
+        android:text="Pay"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintRight_toLeftOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_marginTop="8dp"
+        android:text="QR"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="220dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="8dp" />
+
+
+</android.support.constraint.ConstraintLayout>
