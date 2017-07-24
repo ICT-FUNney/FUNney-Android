@@ -6,18 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class NewAccount extends AppCompatActivity {
+public class UserPolicy extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_account);
+        setContentView(R.layout.activity_user_policy);
 
-        Button enterButton = (Button)findViewById(R.id.enter);
-        enterButton.setOnClickListener(new View.OnClickListener(){
+        Button agreeButton = (Button)findViewById(R.id.agree);
+        agreeButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent policyIntent = new Intent(getApplication(), UserPolicy.class);
-                startActivity(policyIntent);
+                Intent HomeIntent = new Intent(getApplication(), HomeActivity.class);
+                startActivity(HomeIntent);
             }
         });
 

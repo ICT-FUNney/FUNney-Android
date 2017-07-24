@@ -28,6 +28,8 @@ public class ShowQR extends AppCompatActivity {
 
         View v = getWindow().getDecorView();
         onClickQRCodeCreate(v);
+
+        setTitle("FUNney");
     }
 
     //QRCode作成
