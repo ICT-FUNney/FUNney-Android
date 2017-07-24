@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FUNney-Android</string>
+    <string name="qr">QRコードをスキャンして送信</string>
+    <string name="cancel">キャンセル</string>
+    <string name="mail">メールアドレス・履歴から送信</string>
+    <string name="choice">送金方法絵を選択してください</string>
 </resources>
