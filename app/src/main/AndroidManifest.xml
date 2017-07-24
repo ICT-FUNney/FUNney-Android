@@ -42,7 +42,11 @@
             <action android:name="android.intent.action.MAIN" />
         </intent-filter>
 
-        <activity android:name=".Pay"></activity>
+        <activity android:name=".Pay" />
+        <activity android:name=".RequestPay" />
+        <activity android:name=".HelpOption" />
+        <activity android:name=".Question" />
+        <activity android:name=".EditAccount"></activity>
     </application>
 
 </manifest>

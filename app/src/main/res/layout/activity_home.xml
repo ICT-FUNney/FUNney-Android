@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="69dp"
         android:text="マイニング"
-        app:layout_constraintRight_toLeftOf="@+id/button4"
+        app:layout_constraintRight_toLeftOf="@+id/help"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.836"
@@ -63,7 +63,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editText" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ヘルプ"
@@ -95,7 +95,7 @@
         android:layout_marginBottom="48dp"
         android:layout_marginTop="8dp"
         android:text="QR"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/help"
         app:layout_constraintVertical_bias="1.0"
         android:layout_marginRight="52dp"
         app:layout_constraintRight_toRightOf="parent"

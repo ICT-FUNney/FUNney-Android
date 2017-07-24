@@ -13,6 +13,22 @@ public class Pay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
 
+        Button sendButton = (Button)findViewById(R.id.send);
+        sendButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                //ここでQRカメラ起動
+            }
+        });
+
+        Button requestButton = (Button)findViewById(R.id.request);
+        requestButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent requestIntent = new Intent(getApplication(), RequestPay.class);
+                startActivity(requestIntent);
+            }
+        });
+
         setTitle("FUNney");
     }
 }

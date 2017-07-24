@@ -29,6 +29,15 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        Button helpButton = (Button)findViewById(R.id.help);
+        helpButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent helpIntent = new Intent(getApplication(), HelpOption.class);
+                startActivity(helpIntent);
+            }
+        });
+
+
         setTitle("FUNney");
     }
 }
