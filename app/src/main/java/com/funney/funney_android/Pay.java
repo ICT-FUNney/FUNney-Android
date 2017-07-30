@@ -16,6 +16,8 @@ public class Pay extends AppCompatActivity {
         Button sendButton = (Button)findViewById(R.id.send);
         sendButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                Intent popupIntent = new Intent(getApplication(), Popup.class);
+                startActivity(new Intent(popupIntent));
 
                 //ここでQRカメラ起動
             }
