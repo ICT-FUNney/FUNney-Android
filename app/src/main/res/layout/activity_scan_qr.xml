@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.funney.funney_android.ScanQR">
+
+    <LinearLayout
+        android:id="@+id/qrReaderLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <com.journeyapps.barcodescanner.CompoundBarcodeView
+            android:id="@+id/barcodeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

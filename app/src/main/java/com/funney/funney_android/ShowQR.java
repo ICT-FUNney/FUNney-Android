@@ -3,13 +3,9 @@ package com.funney.funney_android;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-//import android.support.v4.app.FragmentActivity;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-//import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -21,8 +17,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 public class ShowQR extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_qr);
 
@@ -33,22 +28,19 @@ public class ShowQR extends AppCompatActivity {
     }
 
     //QRCode作成
-    public void onClickQRCodeCreate(View view)
-    {
+    public void onClickQRCodeCreate(View view) {
         // QRCodeの作成
         Bitmap qrCodeBitmap = this.createQRCode("ICT-FUNNEY");
 
         // QRCodeの作成に成功した場合
-        if (qrCodeBitmap != null)
-        {
+        if (qrCodeBitmap != null) {
             // 結果をImageViewに表示
             ImageView imageView = (ImageView) findViewById(R.id.imageView);
             imageView.setImageBitmap(qrCodeBitmap);
         }
     }
 
-    private Bitmap createQRCode(String contents)
-    {
+    private Bitmap createQRCode(String contents) {
         Bitmap qrBitmap = null;
         try {
             // QRコードの生成
@@ -60,21 +52,16 @@ public class ShowQR extends AppCompatActivity {
 
             qrBitmap = Bitmap.createBitmap(300, 300, Bitmap.Config.ARGB_8888);
             qrBitmap.setPixels(this.createDot(qrBitMatrix), 0, 300, 0, 0, 300, 300);
-        }
-        catch(Exception ex)
-        {
+        } catch (Exception ex) {
             // エンコード失敗
             Toast.makeText(getApplicationContext(), ex.toString(), Toast.LENGTH_SHORT).show();
-        }
-        finally
-        {
+        } finally {
             return qrBitmap;
         }
     }
 
     // ドット単位の判定
-    private int[] createDot(BitMatrix qrBitMatrix)
-    {
+    private int[] createDot(BitMatrix qrBitMatrix) {
         // 縦幅・横幅の取得
         int width = qrBitMatrix.getWidth();
         int height = qrBitMatrix.getHeight();
@@ -82,19 +69,14 @@ public class ShowQR extends AppCompatActivity {
         int[] pixels = new int[width * height];
 
         // データが存在するところを黒にする
-        for (int y = 0; y < height; y++)
-        {
+        for (int y = 0; y < height; y++) {
             // ループ回数盤目のOffsetの取得
             int offset = y * width;
-            for (int x = 0; x < width; x++)
-            {
+            for (int x = 0; x < width; x++) {
                 // データが存在する場合
-                if (qrBitMatrix.get(x, y))
-                {
+                if (qrBitMatrix.get(x, y)) {
                     pixels[offset + x] = Color.BLACK;
-                }
-                else
-                {
+                } else {
                     pixels[offset + x] = Color.WHITE;
                 }
             }
