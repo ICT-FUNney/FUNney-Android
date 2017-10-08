@@ -24,16 +24,8 @@ public class ScanQR extends AppCompatActivity {
         Log.d(TAG, "onCreate Start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_qr);
+        new IntentIntegrator(ScanQR.this).initiateScan();
 
-        // ボタンを取得し、タップした時の動作を指定
-        Button buttonStartCamera = (Button) findViewById(R.id.buttonStartCamera);
-        buttonStartCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "buttonStartCamera onClick Start");
-                new IntentIntegrator(ScanQR.this).initiateScan();
-            }
-        });
     }
 
     @Override
