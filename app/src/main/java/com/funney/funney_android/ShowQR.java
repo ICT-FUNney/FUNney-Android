@@ -1,25 +1,21 @@
 package com.funney.funney_android;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.util.Log;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.view.View.OnClickListener;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 
 public class ShowQR extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +34,6 @@ public class ShowQR extends AppCompatActivity {
             }
         });
     }
-
-
-
 
     //QRCode作成
     public void onClickQRCodeCreate(View view) {
@@ -70,9 +63,8 @@ public class ShowQR extends AppCompatActivity {
         } catch (Exception ex) {
             // エンコード失敗
             Toast.makeText(getApplicationContext(), ex.toString(), Toast.LENGTH_SHORT).show();
-        } finally {
-            return qrBitmap;
         }
+        return qrBitmap;
     }
 
     // ドット単位の判定
