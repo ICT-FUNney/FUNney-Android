@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".HomeActivity">
             <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
@@ -33,7 +34,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScanQR">
+        <activity android:name=".ShowQR">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -49,10 +50,9 @@
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />
         <activity android:name=".EditAccount" />
-        <activity android:name=".ShowQR">
+        <activity android:name=".ScanQR">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
