@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FUNney-Android</string>
+    <string name="myQR">自分のQRコード</string>
+    <string name="scanQR">Scan QR Code</string>
 </resources>
