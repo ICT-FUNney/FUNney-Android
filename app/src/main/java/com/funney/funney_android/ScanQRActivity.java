@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class ScanQR extends AppCompatActivity {
+public class ScanQRActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -18,7 +18,7 @@ public class ScanQR extends AppCompatActivity {
         Log.d(TAG, "onCreate Start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_qr);
-        new IntentIntegrator(ScanQR.this).initiateScan();
+        new IntentIntegrator(ScanQRActivity.this).initiateScan();
     }
 
     @Override
@@ -34,7 +34,7 @@ public class ScanQR extends AppCompatActivity {
         }
 
         if (intentResult.getContents() == null) {
-            Intent intent = new Intent(getApplication(), ShowQR.class);
+            Intent intent = new Intent(getApplication(), ShowQRActivity.class);
             startActivity(intent);
             Log.d(TAG, "Cancelled Scan");
 

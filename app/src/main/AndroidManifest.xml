@@ -34,7 +34,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowQR">
+        <activity android:name=".ShowQRActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -50,7 +50,7 @@
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />
         <activity android:name=".EditAccount" />
-        <activity android:name=".ScanQR">
+        <activity android:name=".ScanQRActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

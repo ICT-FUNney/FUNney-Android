@@ -16,7 +16,7 @@ public class RequestPay extends AppCompatActivity {
         Button payQRButton = (Button)findViewById(R.id.payQR);
         payQRButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent payQRIntent = new Intent(getApplication(), ShowQR.class);
+                Intent payQRIntent = new Intent(getApplication(), ShowQRActivity.class);
                 startActivity(payQRIntent);
             }
         });
