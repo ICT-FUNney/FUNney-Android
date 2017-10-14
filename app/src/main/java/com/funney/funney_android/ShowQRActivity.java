@@ -55,11 +55,11 @@ public class ShowQRActivity extends AppCompatActivity {
             QRCodeWriter qrcodewriter = new QRCodeWriter();
             BitMatrix qrBitMatrix = qrcodewriter.encode(contents,
                     BarcodeFormat.QR_CODE,
-                    300,
-                    300);
+                    900,
+                    900);
 
-            qrBitmap = Bitmap.createBitmap(300, 300, Bitmap.Config.ARGB_8888);
-            qrBitmap.setPixels(this.createDot(qrBitMatrix), 0, 300, 0, 0, 300, 300);
+            qrBitmap = Bitmap.createBitmap(900, 900, Bitmap.Config.ARGB_8888);
+            qrBitmap.setPixels(this.createDot(qrBitMatrix), 0, 900, 0, 0, 900, 900);
         } catch (Exception ex) {
             // エンコード失敗
             Toast.makeText(getApplicationContext(), ex.toString(), Toast.LENGTH_SHORT).show();
