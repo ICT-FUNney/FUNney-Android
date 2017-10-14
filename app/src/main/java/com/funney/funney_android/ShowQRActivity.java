@@ -1,31 +1,46 @@
 package com.funney.funney_android;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
-
+@TargetApi(21)
 public class ShowQRActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_qr);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button searchButton = (Button) findViewById(R.id.button);
         View v = getWindow().getDecorView();
-        onClickQRCodeCreate(v);
 
-        setTitle("FUNney");
+        setSupportActionBar(toolbar);
+        setTitle("QR");
+        toolbar.setNavigationIcon(R.drawable.arrow);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplication(), "back click!!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        onClickQRCodeCreate(v);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
