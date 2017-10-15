@@ -28,6 +28,7 @@ public class ShowQRActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button searchButton = (Button) findViewById(R.id.button);
         View v = getWindow().getDecorView();
+        getWindow().setStatusBarColor(Color.parseColor("#F3A033"));
 
         setSupportActionBar(toolbar);
         setTitle("QR");
