@@ -1,7 +1,6 @@
 package com.funney.funney_android;
 
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -21,15 +20,10 @@ import com.google.zxing.qrcode.QRCodeWriter;
 @TargetApi(21)
 public class ShowQRActivity extends AppCompatActivity {
 
-    private String QRValue = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_qr);
-
-        Intent intent = getIntent();
-        this.QRValue = intent.getStringExtra("payRequest");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button searchButton = (Button) findViewById(R.id.button);
@@ -60,7 +54,7 @@ public class ShowQRActivity extends AppCompatActivity {
     //QRCode作成
     public void onClickQRCodeCreate(View view) {
         // QRCodeの作成
-        Bitmap qrCodeBitmap = this.createQRCode(this.QRValue);
+        Bitmap qrCodeBitmap = this.createQRCode("ICT-FUNNEY");
 
         // QRCodeの作成に成功した場合
         if (qrCodeBitmap != null) {
