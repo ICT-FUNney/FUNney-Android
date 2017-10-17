@@ -63,7 +63,7 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // FIXME NewAccountの名前が変更された場合治す
-                Intent intent = new Intent(getApplication(),NewAccount.class);
+                Intent intent = new Intent(getApplication(), NewAccount.class);
                 startActivity(intent);
             }
         });

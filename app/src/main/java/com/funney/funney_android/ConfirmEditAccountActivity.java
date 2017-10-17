@@ -64,7 +64,7 @@ public class ConfirmEditAccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // FIXME EditAccountの名前が変更された場合治す
-                Intent intent = new Intent(getApplication(),EditAccount.class);
+                Intent intent = new Intent(getApplication(), EditAccount.class);
                 startActivity(intent);
             }
         });
