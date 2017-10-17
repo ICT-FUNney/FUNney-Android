@@ -1,7 +1,9 @@
 package com.funney.funney_android;
 
+import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+@TargetApi(21)
 public class ConfirmNewAccountActivity extends AppCompatActivity {
 
     @Override
@@ -21,6 +24,7 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
         final AlertDialog.Builder confirmDialog = new AlertDialog.Builder(this, R.style.ConfirmDialogStyle);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button confirmButton = (Button) findViewById(R.id.confirm_button);
+        getWindow().setStatusBarColor(Color.parseColor("#F3A033"));
 
         // TODO 前アクティビティからの値の受け取りと対応するTextViewへの値の挿入
         TextView id = (TextView) findViewById(R.id.new_id);
