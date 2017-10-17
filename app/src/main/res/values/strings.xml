@@ -3,4 +3,11 @@
     <string name="myQR">自分のQRコード</string>
     <string name="scanQR">Scan QR Code</string>
     <string name="confirm">Confirm</string>
+    <string name="create">Create</string>
+    <string name="user_id">学籍番号</string>
+    <string name="name">氏名</string>
+    <string name="birthday">生年月日</string>
+    <string name="phone">電話番号</string>
+    <string name="password">パスワード</string>
+    <string name="password_confirm">パスワード再入力</string>
 </resources>
