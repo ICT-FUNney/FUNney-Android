@@ -42,10 +42,6 @@
         </activity>
         <activity android:name=".UserPolicy" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-        </intent-filter>
-
         <activity android:name=".Pay" />
         <activity android:name=".RequestPay" />
         <activity android:name=".HelpOption" />
@@ -56,7 +52,16 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConfirmEditAccountActivity"></activity>
+        <activity
+            android:name=".ConfirmEditAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
