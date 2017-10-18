@@ -3,6 +3,7 @@ package com.funney.funney_android;
 import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -27,12 +28,12 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(Color.parseColor("#F3A033"));
 
         // TODO 前アクティビティからの値の受け取りと対応するTextViewへの値の挿入
-        TextView id = (TextView) findViewById(R.id.new_id);
-        TextView name = (TextView) findViewById(R.id.new_name);
-        TextView birthday = (TextView) findViewById(R.id.new_birthday);
-        TextView phone = (TextView) findViewById(R.id.new_phone);
-        TextView password = (TextView) findViewById(R.id.new_password);
-        TextView passwordConfirm = (TextView) findViewById(R.id.new_password_confirm);
+        final TextView id = (TextView) findViewById(R.id.new_id);
+        final TextView name = (TextView) findViewById(R.id.new_name);
+        final TextView birthday = (TextView) findViewById(R.id.new_birthday);
+        final TextView phone = (TextView) findViewById(R.id.new_phone);
+        final TextView password = (TextView) findViewById(R.id.new_password);
+        final TextView passwordConfirm = (TextView) findViewById(R.id.new_password_confirm);
 
 
         confirmDialog.setMessage("アカウントを作成しました");
@@ -52,6 +53,16 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View view) {
+                // FIXME 前アクティビティから受け取った値を保存するようにする
+                SharedPreferences data = getSharedPreferences("account_data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = data.edit();
+                editor.putString("id", id.getText().toString());
+                editor.putString("name", name.getText().toString());
+                editor.putString("birthday", birthday.getText().toString());
+                editor.putString("phone", phone.getText().toString());
+                editor.putString("password", password.getText().toString());
+                editor.putString("password_confirm", passwordConfirm.getText().toString());
+                editor.apply();
                 confirmDialog.show();
             }
         });
