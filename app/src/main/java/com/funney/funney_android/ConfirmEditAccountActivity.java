@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@TargetApi(21)
 public class ConfirmEditAccountActivity extends AppCompatActivity {
 
     @Override
@@ -27,7 +26,6 @@ public class ConfirmEditAccountActivity extends AppCompatActivity {
         final AlertDialog.Builder confirmDialog = new AlertDialog.Builder(this, R.style.ConfirmDialogStyle);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button confirmButton = (Button) findViewById(R.id.confirm_button);
-        getWindow().setStatusBarColor(Color.parseColor("#F3A033"));
 
         // TODO 前アクティビティからの値の受け取りと対応するTextViewへの値の挿入
         final TextView id = (TextView) findViewById(R.id.edit_id);
