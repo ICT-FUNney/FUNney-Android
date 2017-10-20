@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         fragmentManager = getSupportFragmentManager();
+        getSupportActionBar().setElevation(0);
     }
 
     public void onClickHistory(View view) {
