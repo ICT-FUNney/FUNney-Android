@@ -19,7 +19,7 @@
         android:id="@+id/confirm_button"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
