@@ -2,4 +2,9 @@
     <string name="app_name">FUNney-Android</string>
     <string name="myQR">自分のQRコード</string>
     <string name="scanQR">Scan QR Code</string>
+    <string name="homeValue">総資産 Total Asset Value</string>
+    <string name="fny">FNY</string>
+    <string name="featured_transaction">注目の取引</string>
+    <string name="transaction_history">取引履歴</string>
+    <string name="pay">PAY</string>
 </resources>

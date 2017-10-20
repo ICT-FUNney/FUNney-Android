@@ -1,43 +1,42 @@
 package com.funney.funney_android;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTabHost;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TabHost;
 
 public class HomeActivity extends AppCompatActivity {
+
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        Button showQRButton = (Button)findViewById(R.id.showQR);
-        showQRButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent showQRIntent = new Intent(getApplication(), ShowQRActivity.class);
-                startActivity(showQRIntent);
-            }
-        });
-
-        Button payButton = (Button)findViewById(R.id.pay);
-        payButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent payIntent = new Intent(getApplication(), Pay.class);
-                startActivity(payIntent);
-            }
-        });
-
-        Button helpButton = (Button)findViewById(R.id.help);
-        helpButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent helpIntent = new Intent(getApplication(), HelpOption.class);
-                startActivity(helpIntent);
-            }
-        });
-
-
-        setTitle("FUNney");
+        fragmentManager = getSupportFragmentManager();
     }
+
+    public void onClickHistory(View view) {
+        Fragment fragment = new TransactionHistoryFragment();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.contents,fragment );
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void onClickFeatured(View view) {
+        Fragment fragment = new FeaturedTransactionFragment();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.contents,fragment );
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 }
