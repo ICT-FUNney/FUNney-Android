@@ -42,7 +42,8 @@
                 android:gravity="center"
                 android:text="1234"
                 android:textColor="@color/toolBarText"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView15"
