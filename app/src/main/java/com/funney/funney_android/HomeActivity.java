@@ -1,6 +1,9 @@
 package com.funney.funney_android;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
@@ -22,12 +25,14 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         fragmentManager = getSupportFragmentManager();
         getSupportActionBar().setElevation(0);
+        onClickFeatured(getWindow().getDecorView().findViewById(android.R.id.content));
     }
 
     public void onClickHistory(View view) {
+
         Fragment fragment = new TransactionHistoryFragment();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.contents,fragment );
+        transaction.replace(R.id.contents, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -35,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
     public void onClickFeatured(View view) {
         Fragment fragment = new FeaturedTransactionFragment();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.contents,fragment );
+        transaction.replace(R.id.contents, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }

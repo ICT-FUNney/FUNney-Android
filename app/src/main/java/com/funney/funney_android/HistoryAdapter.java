@@ -16,11 +16,11 @@ import java.util.List;
  * Created by keita on 2017/10/21.
  */
 
-public class TransacsionAdapter extends BaseAdapter {
+public class HistoryAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private List<Transaction> transactions;
 
-    public TransacsionAdapter(Context context, List<Transaction> objects) {
+    public HistoryAdapter(Context context, List<Transaction> objects) {
         this.inflater = LayoutInflater.from(context);
         this.transactions = objects;
     }
@@ -44,7 +44,7 @@ public class TransacsionAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Transaction transaction = this.transactions.get(position);
         if (convertView == null) {
-            convertView = this.inflater.inflate(R.layout.view_transaction, null);
+            convertView = this.inflater.inflate(R.layout.view_history, null);
         }
         TextView timestamp = (TextView) convertView.findViewById(R.id.history_date);
         TextView name = (TextView) convertView.findViewById(R.id.history_name);

@@ -61,7 +61,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical"
         android:weightSum="1"
         app:layout_constraintBottom_toTopOf="@+id/pay_button"
@@ -72,13 +72,17 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="32dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp">
 
             <fragment
                 android:id="@+id/menuFragment"
                 android:name="com.funney.funney_android.ButtonFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 tools:layout="@layout/button_fragment" />
         </FrameLayout>
 
@@ -102,9 +106,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:textColor="@color/toolBarText"
         android:background="@drawable/pay_button"
         android:text="@string/pay"
+        android:textColor="@color/toolBarText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

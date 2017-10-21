@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
     android:layout_marginEnd="8dp"
     android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
     android:orientation="horizontal">
 
     <Button
@@ -11,6 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@drawable/featured_button"
         android:onClick="onClickFeatured"
         android:text="@string/featured_transaction" />
 
@@ -19,6 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@drawable/history_button"
         android:onClick="onClickHistory"
         android:text="@string/transaction_history" />
 </LinearLayout>

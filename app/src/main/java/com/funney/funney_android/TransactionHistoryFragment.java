@@ -1,10 +1,12 @@
 package com.funney.funney_android;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.funney.funney_android.data.Transaction;
@@ -17,6 +19,10 @@ import java.util.ArrayList;
  */
 
 public class TransactionHistoryFragment extends Fragment {
+
+    private String orrange = "#F3A033";
+    private String white = "#FFFFFF";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,13 +32,23 @@ public class TransactionHistoryFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        //取引履歴ボタンをオレンジにする
+        Button historyButton = (Button) getActivity().findViewById(R.id.transaction_history_button);
+        historyButton.setBackgroundResource(R.drawable.history_button);
+        historyButton.setTextColor(Color.parseColor(white));
+
+        //注目の取引ボタンを白くする
+        Button featuredButton = (Button) getActivity().findViewById(R.id.featured_transaction_button);
+        featuredButton.setBackgroundResource(R.drawable.featured_button_white);
+        featuredButton.setTextColor(Color.parseColor(orrange));
+
         ListView list = (ListView)getActivity().findViewById(R.id.transacsion_history_list);
         ArrayList<Transaction> trlist = new ArrayList<Transaction>();
         for(int i=0;i<30;i++){
             String str = String.valueOf(i);
             trlist.add(new Transaction(str,str,i));
         }
-        TransacsionAdapter adapter = new TransacsionAdapter(getContext(),trlist);
+        HistoryAdapter adapter = new HistoryAdapter(getContext(),trlist);
         list.setAdapter(adapter);
 
     }
