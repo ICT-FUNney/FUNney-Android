@@ -8,57 +8,9 @@
     tools:showIn="@layout/app_bar_nav">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:background="#F3A033"
-        android:orientation="vertical"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="bottom|center"
-            android:text="@string/homeValue"
-            android:textColor="@color/toolBarText" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp">
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignBaseline="@+id/textView15"
-                android:layout_alignBottom="@+id/textView15"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="1234"
-                android:textColor="@color/toolBarText"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/textView17"
-                android:layout_toRightOf="@+id/textView17"
-                android:gravity="center"
-                android:paddingLeft="10dp"
-                android:text="@string/fny"
-                android:textColor="@color/toolBarText"
-                android:textSize="25sp" />
-        </RelativeLayout>
-    </LinearLayout>
+    <include
+        android:id="@+id/home_value"
+        layout="@layout/view_total_value" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -69,7 +21,7 @@
         app:layout_constraintBottom_toTopOf="@+id/pay_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/home_value">
 
 
         <FrameLayout
