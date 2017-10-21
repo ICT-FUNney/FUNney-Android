@@ -7,4 +7,18 @@
     <string name="featured_transaction">注目の取引</string>
     <string name="transaction_history">取引履歴</string>
     <string name="pay">PAY</string>
+    <string name="title_activity_nav">Nav</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="mining">マイニング</string>
+    <string name="edit_account">アカウント情報変更</string>
+    <string name="agreement">利用規約</string>
+    <string name="question">よくある質問</string>
+    <string name="logout">ログアウト</string>
+
+    <string name="funney">FUNney</string>
 </resources>

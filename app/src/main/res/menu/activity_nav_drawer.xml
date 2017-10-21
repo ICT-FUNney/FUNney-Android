@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_mining"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_mining"
+            android:title="@string/mining" />
+    </group>
+
+    <group
+        android:id="@+id/group_others"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_edit_account"
+            android:title="@string/edit_account" />
+        <item
+            android:id="@+id/nav_agreement"
+            android:title="@string/agreement" />
+        <item
+            android:id="@+id/nav_question"
+            android:title="@string/question" />
+    </group>
+
+
+    <group
+        android:id="@+id/group_logout"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+
+
+    </group>
+
+</menu>
