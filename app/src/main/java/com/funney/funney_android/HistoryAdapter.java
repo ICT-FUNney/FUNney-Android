@@ -51,6 +51,8 @@ public class HistoryAdapter extends BaseAdapter {
         ImageView img = (ImageView) convertView.findViewById(R.id.history_image);
         TextView value = (TextView) convertView.findViewById(R.id.history_value);
 
+        // TODO 仕切りの作成
+
         timestamp.setText(transaction.getTimestamp());
         img.setImageResource(R.drawable.transaction_history_icon_out);
         value.setText(transaction.getValue());
