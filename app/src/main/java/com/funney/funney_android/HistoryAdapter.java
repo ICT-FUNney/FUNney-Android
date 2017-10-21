@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.funney.funney_android.data.Transaction;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /**
@@ -50,13 +52,25 @@ public class HistoryAdapter extends BaseAdapter {
         TextView name = (TextView) convertView.findViewById(R.id.history_name);
         ImageView img = (ImageView) convertView.findViewById(R.id.history_image);
         TextView value = (TextView) convertView.findViewById(R.id.history_value);
-
-        // TODO 仕切りの作成
+        TextView partition = (TextView) convertView.findViewById(R.id.partition);
 
         timestamp.setText(transaction.getTimestamp());
-        img.setImageResource(R.drawable.transaction_history_icon_out);
-        value.setText(transaction.getValue());
+        if (transaction.getTimestamp().equals("10")) {
+            img.setImageResource(R.drawable.transaction_history_icon_out);
+        } else {
+            img.setImageResource(R.drawable.transaction_history_icon_in);
+        }
+        value.setText(transaction.toString());
         name.setText(transaction.getName());
+
+        // 仕切り(partition)
+        if (transaction.getValue() % 10 == 9 && transaction.getValue() != 0) {
+            partition.setVisibility(View.VISIBLE);
+            partition.setText(String.valueOf(transaction.getValue() + 1));
+        } else {
+            partition.setVisibility(View.GONE);
+
+        }
 
         return convertView;
     }

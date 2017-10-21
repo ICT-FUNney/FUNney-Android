@@ -20,6 +20,10 @@ public class Transaction {
         return timestamp;
     }
 
+    public String toString() {
+        return String.valueOf(this.value);
+    }
+
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
@@ -32,8 +36,8 @@ public class Transaction {
         this.name = name;
     }
 
-    public String getValue() {
-        return String.valueOf(value);
+    public int getValue() {
+        return value;
     }
 
     public void setValue(int value) {
