@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.funney.funney_android.data.Transaction;
@@ -53,6 +54,7 @@ public class HistoryAdapter extends BaseAdapter {
         ImageView img = (ImageView) convertView.findViewById(R.id.history_image);
         TextView value = (TextView) convertView.findViewById(R.id.history_value);
         TextView partition = (TextView) convertView.findViewById(R.id.partition);
+        LinearLayout partitionLayout = (LinearLayout) convertView.findViewById(R.id.partition_layout);
 
         timestamp.setText(transaction.getTimestamp());
         if (transaction.getTimestamp().equals("10")) {
@@ -65,11 +67,10 @@ public class HistoryAdapter extends BaseAdapter {
 
         // 仕切り(partition)
         if (transaction.getValue() % 10 == 9 && transaction.getValue() != 0) {
-            partition.setVisibility(View.VISIBLE);
+            partitionLayout.setVisibility(View.VISIBLE);
             partition.setText(String.valueOf(transaction.getValue() + 1));
         } else {
-            partition.setVisibility(View.GONE);
-
+            partitionLayout.setVisibility(View.GONE);
         }
 
         return convertView;
