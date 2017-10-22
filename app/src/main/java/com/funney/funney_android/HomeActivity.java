@@ -26,8 +26,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private ViewPager pager;
 
-    private FragmentPagerAdapter adapter;
-
     private int currentPage;
 
     private String orrange = "#F3A033";
@@ -41,11 +39,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         // ViewPager関連
         pager = (ViewPager) findViewById(R.id.home_pager);
-        adapter = new HomeViewPagerAdapter(getSupportFragmentManager());
+        FragmentPagerAdapter adapter = new HomeViewPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(adapter);
         currentPage = 1;
 
-        pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 int pg = pager.getCurrentItem();
@@ -99,7 +97,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
