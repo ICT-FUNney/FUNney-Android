@@ -66,9 +66,9 @@ public class HistoryAdapter extends BaseAdapter {
         name.setText(transaction.getName());
 
         // 仕切り(partition)
-        if (transaction.getValue() % 10 == 9 && transaction.getValue() != 0) {
+        if (transaction.getValue() % 10 == 0 && transaction.getValue() != 0) {
             partitionLayout.setVisibility(View.VISIBLE);
-            partition.setText(String.valueOf(transaction.getValue() + 1));
+            partition.setText(String.valueOf(transaction.getValue()));
         } else {
             partitionLayout.setVisibility(View.GONE);
         }
