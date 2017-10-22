@@ -54,7 +54,10 @@ public class HistoryAdapter extends BaseAdapter {
         ImageView img = (ImageView) convertView.findViewById(R.id.history_image);
         TextView value = (TextView) convertView.findViewById(R.id.history_value);
         TextView partition = (TextView) convertView.findViewById(R.id.partition);
+
         LinearLayout partitionLayout = (LinearLayout) convertView.findViewById(R.id.partition_layout);
+
+
 
         timestamp.setText(transaction.getTimestamp());
         if (transaction.getTimestamp().equals("10")) {
