@@ -58,7 +58,6 @@ public class HistoryAdapter extends BaseAdapter {
         LinearLayout partitionLayout = (LinearLayout) convertView.findViewById(R.id.partition_layout);
 
 
-
         timestamp.setText(transaction.getTimestamp());
         if (transaction.getTimestamp().equals("10")) {
             img.setImageResource(R.drawable.transaction_history_icon_out);

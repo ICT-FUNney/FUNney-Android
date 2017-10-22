@@ -29,17 +29,18 @@ public class TransactionHistoryFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.transaction_history, container, false);
     }
+
     @Override
     public void onStart() {
         super.onStart();
 
-        ListView list = (ListView)getActivity().findViewById(R.id.transacsion_history_list);
+        ListView list = (ListView) getActivity().findViewById(R.id.transacsion_history_list);
         ArrayList<Transaction> trlist = new ArrayList<Transaction>();
-        for(int i=0;i<30;i++){
+        for (int i = 0; i < 30; i++) {
             String str = String.valueOf(i);
-            trlist.add(new Transaction(str,str,i));
+            trlist.add(new Transaction(str, str, i));
         }
-        HistoryAdapter adapter = new HistoryAdapter(getContext(),trlist);
+        HistoryAdapter adapter = new HistoryAdapter(getContext(), trlist);
         list.setAdapter(adapter);
 
     }
