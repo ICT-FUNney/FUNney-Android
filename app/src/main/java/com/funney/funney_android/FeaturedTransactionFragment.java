@@ -36,15 +36,6 @@ public class FeaturedTransactionFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        //注目の取引ボタンをオレンジにする
-        Button featuredButton = (Button) getActivity().findViewById(R.id.featured_transaction_button);
-        featuredButton.setBackgroundResource(R.drawable.featured_button);
-        featuredButton.setTextColor(Color.parseColor(white));
-
-        //取引履歴ボタンを白くする
-        Button historyButton = (Button) getActivity().findViewById(R.id.transaction_history_button);
-        historyButton.setBackgroundResource(R.drawable.history_button_white);
-        historyButton.setTextColor(Color.parseColor(orrange));
 
         ListView list = (ListView) getActivity().findViewById(R.id.featured_transaction_list);
         ArrayList<Transaction> trlist = new ArrayList<Transaction>();

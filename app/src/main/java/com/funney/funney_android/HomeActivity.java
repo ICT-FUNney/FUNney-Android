@@ -1,11 +1,14 @@
 package com.funney.funney_android;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,17 +23,66 @@ import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private FragmentManager fragmentManager;
+
+    private ViewPager pager;
+
+    private FragmentPagerAdapter adapter;
+
+    private int currentPage;
+
+    private String orrange = "#F3A033";
+    private String white = "#FFFFFF";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        fragmentManager = getSupportFragmentManager();
 
-        // 起動時はfeatured transaction fragmentを呼び出す
-        onClickFeatured(getWindow().getDecorView().findViewById(android.R.id.content));
+        // ViewPager関連
+        pager = (ViewPager) findViewById(R.id.home_pager);
+        adapter = new HomeViewPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(adapter);
+        currentPage = 1;
 
+        pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                int pg = pager.getCurrentItem();
+                if (pg == 0) {
+                    //注目の取引ボタンをオレンジにする
+                    Button featuredButton = (Button) findViewById(R.id.featured_transaction_button);
+                    featuredButton.setBackgroundResource(R.drawable.featured_button);
+                    featuredButton.setTextColor(Color.parseColor(white));
+
+                    //取引履歴ボタンを白くする
+                    Button historyButton = (Button) findViewById(R.id.transaction_history_button);
+                    historyButton.setBackgroundResource(R.drawable.history_button_white);
+                    historyButton.setTextColor(Color.parseColor(orrange));
+                } else {
+                    //取引履歴ボタンをオレンジにする
+                    Button historyButton = (Button) findViewById(R.id.transaction_history_button);
+                    historyButton.setBackgroundResource(R.drawable.history_button);
+                    historyButton.setTextColor(Color.parseColor(white));
+
+                    //注目の取引ボタンを白くする
+                    Button featuredButton = (Button) findViewById(R.id.featured_transaction_button);
+                    featuredButton.setBackgroundResource(R.drawable.featured_button_white);
+                    featuredButton.setTextColor(Color.parseColor(orrange));
+                }
+            }
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        // PayButton関連
         Button payButton = (Button) findViewById(R.id.pay_button);
 
         payButton.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +92,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        // drawer Layout関連
+        // NavigationDrawer関連
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_home);
         setSupportActionBar(toolbar);
 
@@ -55,20 +107,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void onClickHistory(View view) {
-
-        Fragment fragment = new TransactionHistoryFragment();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.contents, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        currentPage = 1;
+        pager.setCurrentItem(currentPage);
     }
 
     public void onClickFeatured(View view) {
-        Fragment fragment = new FeaturedTransactionFragment();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.contents, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        currentPage = 0;
+        pager.setCurrentItem(currentPage);
     }
 
     @Override
@@ -83,23 +128,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.nav, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        //int id = item.getItemId();
-
-        ////noinspection SimplifiableIfStatement
-        //if (id == R.id.action_settings) {
-        //    return true;
-        //}
-
         return super.onOptionsItemSelected(item);
     }
 
