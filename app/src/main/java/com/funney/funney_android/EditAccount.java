@@ -13,15 +13,12 @@ public class EditAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_account);
 
-        // FIXME 仮の遷移なのでちゃんとした実装がきたら消す
-        Button button = (Button) findViewById(R.id.go_to_confirm);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplication(),ConfirmEditAccountActivity.class);
-                startActivity(intent);
+        Button enterButton = (Button)findViewById(R.id.edit_enter);
+        enterButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent confirmeditIntent = new Intent(getApplication(), ConfirmEditAccountActivity.class);
+                startActivity(confirmeditIntent);
             }
         });
     }
-
 }

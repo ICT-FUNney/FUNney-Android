@@ -13,10 +13,10 @@ public class NewAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_account);
 
-        Button enterButton = (Button)findViewById(R.id.enter);
+        Button enterButton = (Button)findViewById(R.id.edit_enter);
         enterButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent policyIntent = new Intent(getApplication(), UserPolicy.class);
+                Intent policyIntent = new Intent(getApplication(), ConfirmNewAccountActivity.class);
                 startActivity(policyIntent);
             }
         });

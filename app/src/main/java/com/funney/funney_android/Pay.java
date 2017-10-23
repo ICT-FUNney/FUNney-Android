@@ -66,18 +66,18 @@ public class Pay extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int idx) {
 
                     // アラートの選択肢
-                    //if (idx == 0) {
+                    if (idx == 0) {
                         //アラートを押したら画面遷移
-                       Intent sendIntent = new Intent(getActivity().getApplication(), ShowQR.class);
+                        Intent sendIntent = new Intent(getActivity().getApplication(), ShowQRActivity.class);
                         startActivity(sendIntent);
-                    //}
-                   // else if (idx == 1) {
-                        //Intent scanqrIntent = new Intent(getApplication(), ShowQR.class);
-                        //startActivity(scanqrIntent);
-                   // }
-                    //else {
+                        //}
+                    } else if (idx == 1) {
+                    Intent scanIntent = new Intent(getActivity().getApplication(), ScanQRActivity.class);
+                    startActivity(scanIntent);
+                    }
+                    else {
                         // nothing to do
-                    //}
+                    }
                 }
             });
 

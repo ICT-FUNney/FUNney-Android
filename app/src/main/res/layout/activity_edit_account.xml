@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/newID"
+        android:id="@+id/editID"
         android:layout_width="330dp"
         android:layout_height="43dp"
         android:layout_marginLeft="8dp"
@@ -17,28 +17,32 @@
         android:ems="10"
         android:gravity="right"
         android:hint="学籍番号"
+        android:drawableLeft="@drawable/id_card_icon_black_item"
+        android:drawablePadding="20dp"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/newAddress"
+        android:id="@+id/editAddress"
         android:layout_width="330dp"
         android:layout_height="43dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/person_icon_item"
+        android:drawablePadding="20dp"
         android:ems="10"
         android:gravity="right"
         android:hint="氏名"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newID" />
+        app:layout_constraintTop_toBottomOf="@+id/editID" />
 
     <EditText
-        android:id="@+id/newPassword"
+        android:id="@+id/editPassword"
         android:layout_width="330dp"
         android:layout_height="43dp"
         android:layout_marginLeft="8dp"
@@ -47,14 +51,16 @@
         android:ems="10"
         android:gravity="right"
         android:hint="パスワード"
+        android:drawableLeft="@drawable/close_icon_black_item"
+        android:drawablePadding="20dp"
         android:inputType="textPassword"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPhonNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editPhonNumber" />
 
     <EditText
-        android:id="@+id/newPassword2"
+        android:id="@+id/editPassword2"
         android:layout_width="330dp"
         android:layout_height="43dp"
         android:layout_marginLeft="8dp"
@@ -63,10 +69,12 @@
         android:ems="10"
         android:gravity="right"
         android:hint="パスワード（再入力）"
+        android:drawableLeft="@drawable/close_icon_black_item"
+        android:drawablePadding="20dp"
         android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
 
     <Button
         android:id="@+id/edit_enter"
@@ -83,46 +91,44 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/editPassword2" />
 
     <EditText
-        android:id="@+id/newBirth"
+        android:id="@+id/editBirth"
         android:layout_width="330dp"
         android:layout_height="43dp"
         android:layout_marginLeft="8dp"
-
         android:layout_marginTop="15dp"
         android:ems="10"
         android:gravity="right"
         android:hint="生年月日"
-
+        android:drawableLeft="@drawable/cake_item"
+        android:drawablePadding="20dp"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
-
-
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editAddress" />
 
     <EditText
 
-        android:id="@+id/newPhonNumber"
+        android:id="@+id/editPhonNumber"
         android:layout_width="330dp"
         android:layout_height="43dp"
         android:layout_marginLeft="8dp"
-
         android:layout_marginTop="15dp"
         android:ems="10"
         android:gravity="right"
         android:hint="電話番号"
-
+        android:drawableLeft="@drawable/phone_icon_item"
+        android:drawablePadding="20dp"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newBirth" />
+        app:layout_constraintTop_toBottomOf="@+id/editBirth" />
 
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -132,11 +138,11 @@
         android:lineSpacingExtra="30sp"
         android:text="※例：1820年8月2日→18200802"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/newPhonNumber"
+        app:layout_constraintBottom_toTopOf="@+id/editPhonNumber"
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editAddress"
         app:layout_constraintVertical_bias="0.869" />
 
 
