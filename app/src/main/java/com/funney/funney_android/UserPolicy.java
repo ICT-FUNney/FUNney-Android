@@ -16,7 +16,7 @@ public class UserPolicy extends AppCompatActivity {
         Button agreeButton = (Button)findViewById(R.id.agree);
         agreeButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent HomeIntent = new Intent(getApplication(), HomeActivity.class);
+                Intent HomeIntent = new Intent(getApplication(), ConfirmNewAccountActivity.class);
                 startActivity(HomeIntent);
             }
         });

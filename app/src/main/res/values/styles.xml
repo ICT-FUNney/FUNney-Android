@@ -11,4 +11,10 @@
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/toolBarText</item>
     </style>
+
+    <style name="ConfirmDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@android:color/holo_blue_dark</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
 </resources>
