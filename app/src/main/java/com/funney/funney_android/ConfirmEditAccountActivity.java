@@ -40,12 +40,21 @@ public class ConfirmEditAccountActivity extends AppCompatActivity {
         final String editPassword = intent.getStringExtra("password");
         final String editPasswordConfirm = intent.getStringExtra("password_confirm");
 
+        String hiddenPassword = "";
+        String hiddenPasswordConfirm = "";
+        for(int i=0;i<editPassword.length();i++){
+            hiddenPassword = hiddenPassword + "*";
+        }
+        for(int i=0;i<editPasswordConfirm.length();i++){
+            hiddenPasswordConfirm = hiddenPasswordConfirm + "*";
+        }
+
         id.setText(editID);
         name.setText(editName);
         birthday.setText(editBirthday);
         phone.setText(editPhone);
-        password.setText(editPassword);
-        passwordConfirm.setText(editPasswordConfirm);
+        password.setText(hiddenPassword);
+        passwordConfirm.setText(hiddenPasswordConfirm);
 
 
         confirmDialog.setMessage("アカウント情報を変更しました");

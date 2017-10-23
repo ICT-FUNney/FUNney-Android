@@ -39,12 +39,21 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
         final String newPassword = intent.getStringExtra("password");
         final String newPasswordConfirm = intent.getStringExtra("password_confirm");
 
+        String hiddenPassword = "";
+        String hiddenPasswordConfirm = "";
+        for(int i=0;i<newPassword.length();i++){
+            hiddenPassword = hiddenPassword + "*";
+        }
+        for(int i=0;i<newPasswordConfirm.length();i++){
+            hiddenPasswordConfirm = hiddenPasswordConfirm + "*";
+        }
+
         id.setText(newID);
         name.setText(newName);
         birthday.setText(newBirthday);
         phone.setText(newPassword);
-        password.setText(newPassword);
-        passwordConfirm.setText(newPasswordConfirm);
+        password.setText(hiddenPassword);
+        passwordConfirm.setText(hiddenPasswordConfirm);
 
         confirmDialog.setMessage("アカウントを作成しました");
         confirmDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
