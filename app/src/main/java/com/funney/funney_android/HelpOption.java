@@ -35,7 +35,7 @@ public class HelpOption extends AppCompatActivity {
         Button editACButton = (Button)findViewById(R.id.editAC);
         editACButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent editACIntent = new Intent(getApplication(), EditAccount.class);
+                Intent editACIntent = new Intent(getApplication(), EditAccountActivity.class);
                 startActivity(editACIntent);
             }
         });

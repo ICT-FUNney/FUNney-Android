@@ -1,10 +1,8 @@
 package com.funney.funney_android;
 
-import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +23,8 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button confirmButton = (Button) findViewById(R.id.confirm_button);
 
-        // TODO 前アクティビティからの値の受け取りと対応するTextViewへの値の挿入
+        Intent intent = getIntent();
+
         final TextView id = (TextView) findViewById(R.id.new_id);
         final TextView name = (TextView) findViewById(R.id.new_name);
         final TextView birthday = (TextView) findViewById(R.id.new_birthday);
@@ -33,6 +32,28 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
         final TextView password = (TextView) findViewById(R.id.new_password);
         final TextView passwordConfirm = (TextView) findViewById(R.id.new_password_confirm);
 
+        final String newID = intent.getStringExtra("id");
+        final String newName = intent.getStringExtra("name");
+        final String newBirthday = intent.getStringExtra("birthday");
+        final String newPhone = intent.getStringExtra("phone");
+        final String newPassword = intent.getStringExtra("password");
+        final String newPasswordConfirm = intent.getStringExtra("password_confirm");
+
+        String hiddenPassword = "";
+        String hiddenPasswordConfirm = "";
+        for(int i=0;i<newPassword.length();i++){
+            hiddenPassword = hiddenPassword + "*";
+        }
+        for(int i=0;i<newPasswordConfirm.length();i++){
+            hiddenPasswordConfirm = hiddenPasswordConfirm + "*";
+        }
+
+        id.setText(newID);
+        name.setText(newName);
+        birthday.setText(newBirthday);
+        phone.setText(newPassword);
+        password.setText(hiddenPassword);
+        passwordConfirm.setText(hiddenPasswordConfirm);
 
         confirmDialog.setMessage("アカウントを作成しました");
         confirmDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -51,15 +72,14 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View view) {
-                // FIXME 前アクティビティから受け取った値を保存するようにする
                 SharedPreferences data = getSharedPreferences("account_data", MODE_PRIVATE);
                 SharedPreferences.Editor editor = data.edit();
-                editor.putString("id", id.getText().toString());
-                editor.putString("name", name.getText().toString());
-                editor.putString("birthday", birthday.getText().toString());
-                editor.putString("phone", phone.getText().toString());
-                editor.putString("password", password.getText().toString());
-                editor.putString("password_confirm", passwordConfirm.getText().toString());
+                editor.putString("id", newID);
+                editor.putString("name", newName);
+                editor.putString("birthday", newBirthday);
+                editor.putString("phone", newPhone);
+                editor.putString("password", newPassword);
+                editor.putString("password_confirm", newPasswordConfirm);
                 editor.apply();
                 confirmDialog.show();
             }
@@ -71,8 +91,7 @@ public class ConfirmNewAccountActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // FIXME NewAccountの名前が変更された場合治す
-                Intent intent = new Intent(getApplication(), NewAccount.class);
+                Intent intent = new Intent(getApplication(), NewAccountActivity.class);
                 startActivity(intent);
             }
         });

@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".NewAccount">
+        <activity android:name=".NewAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -45,11 +45,11 @@
         </activity>
 
         <activity android:name=".UserPolicy" />
-        <activity android:name=".Pay" />
+        <activity android:name=".PayActivity" />
         <activity android:name=".RequestPay" />
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />
-        <activity android:name=".EditAccount" />
+        <activity android:name=".EditAccountActivity" />
 
         <activity android:name=".ScanQRActivity">
             <intent-filter>
