@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity {
         Button showQRButton = (Button)findViewById(R.id.showQR);
         showQRButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent showQRIntent = new Intent(getApplication(), ShowQR.class);
+                Intent showQRIntent = new Intent(getApplication(), ShowQRActivity.class);
                 startActivity(showQRIntent);
             }
         });
