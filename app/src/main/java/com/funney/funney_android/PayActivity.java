@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class Pay extends AppCompatActivity {
+public class PayActivity extends AppCompatActivity {
 
 
     private DialogFragment dialogFragment;
@@ -53,14 +53,14 @@ public class Pay extends AppCompatActivity {
     // DialogFragment を継承したクラス
     public static class AlertDialogFragment extends DialogFragment {
         // アラートの選択肢のリスト
-        private String[] menulist = {"Scan a QR Code", "Send to email or contact","cancel"};
+        private String[] menulist = {"Scan a QR Code", "Send to email or contact", "cancel"};
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
-            alert.setTitle("How would you like to send money?");
+            //alert.setTitle("How would you like to send money?");
             alert.setItems(menulist, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int idx) {
@@ -72,10 +72,9 @@ public class Pay extends AppCompatActivity {
                         startActivity(sendIntent);
                         //}
                     } else if (idx == 1) {
-                    Intent scanIntent = new Intent(getActivity().getApplication(), ScanQRActivity.class);
-                    startActivity(scanIntent);
-                    }
-                    else {
+                        Intent scanIntent = new Intent(getActivity().getApplication(), ScanQRActivity.class);
+                        startActivity(scanIntent);
+                    } else {
                         // nothing to do
                     }
                 }

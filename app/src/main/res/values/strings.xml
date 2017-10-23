@@ -10,4 +10,9 @@
     <string name="phone">電話番号</string>
     <string name="password">パスワード</string>
     <string name="password_confirm">パスワード再入力</string>
+    <string name="password_confirm_edit">パスワード（再入力）</string>
+    <string name="send">▲ Send</string>
+    <string name="pay">▼ Request</string>
+    <string name="continue_text">Continue</string>
+    <string name="birthday_example">※例：1820年8月2日→18200802</string>
 </resources>

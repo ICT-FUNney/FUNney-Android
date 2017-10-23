@@ -14,18 +14,18 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login
         );
 
-        Button loginButton = (Button)findViewById(R.id.login);
-        loginButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        Button loginButton = (Button) findViewById(R.id.login);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 Intent homeIntent = new Intent(getApplication(), HomeActivity.class);
                 startActivity(homeIntent);
             }
         });
 
-        Button newACButton = (Button)findViewById(R.id.newAccount);
-        newACButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent newACIntent = new Intent(getApplication(), NewAccount.class);
+        Button newACButton = (Button) findViewById(R.id.newAccount);
+        newACButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent newACIntent = new Intent(getApplication(), NewAccountActivity.class);
                 startActivity(newACIntent);
             }
         });
