@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -71,7 +72,7 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
 
         // navigationDrawerのheaderにローカルに保存してあるユーザー名を表示
         View header = navigationView.getHeaderView(0);
-        TextView userName = (TextView) header.findViewById(R.id.username_header);
+        TextView userName = header.findViewById(R.id.username_header);
         SharedPreferences pref = getSharedPreferences("account_data", MODE_PRIVATE);
         userName.setText(pref.getString("name", ""));
 
@@ -83,6 +84,7 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
         // アラートの選択肢のリスト
         private String[] menulist = {"Scan a QR Code", "Send to email or contact", "cancel"};
 
+        @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -99,11 +101,9 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
                         Intent sendIntent = new Intent(getActivity().getApplication(), ShowQRActivity.class);
                         startActivity(sendIntent);
                         //}
-                    } else if (idx == 1) {
+                    } else {
                         Intent scanIntent = new Intent(getActivity().getApplication(), ScanQRActivity.class);
                         startActivity(scanIntent);
-                    } else {
-                        // nothing to do
                     }
                 }
             });
