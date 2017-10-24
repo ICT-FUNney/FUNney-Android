@@ -28,6 +28,7 @@
         android:background="@drawable/confirm_account_button"
         android:text="@string/create"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/blue_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -141,23 +142,23 @@
                 android:id="@+id/new_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/phone_icon_item"
-                android:drawablePadding="20dp"
-                android:gravity="center_vertical"
                 android:layout_alignBaseline="@+id/new_phone_label"
                 android:layout_alignBottom="@+id/new_phone_label"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/phone_icon_item"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical" />
 
             <TextView
+                android:id="@+id/new_phone_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:text="@string/phone"
-                android:id="@+id/new_phone_label" />
+                android:text="@string/phone" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -169,23 +170,23 @@
                 android:id="@+id/new_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/close_icon_black_item"
-                android:drawablePadding="20dp"
-                android:gravity="center_vertical"
                 android:layout_alignBaseline="@+id/new_password_label"
                 android:layout_alignBottom="@+id/new_password_label"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/close_icon_black_item"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical" />
 
             <TextView
+                android:id="@+id/new_password_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:text="@string/password"
-                android:id="@+id/new_password_label" />
+                android:text="@string/password" />
 
         </RelativeLayout>
 
@@ -198,23 +199,23 @@
                 android:id="@+id/new_password_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/close_icon_black_item"
-                android:drawablePadding="20dp"
-                android:gravity="center_vertical"
                 android:layout_alignBaseline="@+id/new_password_confirm_label"
                 android:layout_alignBottom="@+id/new_password_confirm_label"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/close_icon_black_item"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical" />
 
             <TextView
+                android:id="@+id/new_password_confirm_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:text="@string/password_confirm"
-                android:id="@+id/new_password_confirm_label" />
+                android:text="@string/password_confirm" />
         </RelativeLayout>
 
     </LinearLayout>

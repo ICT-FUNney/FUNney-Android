@@ -62,6 +62,7 @@
         android:background="@drawable/pay_button"
         android:text="@string/pay_button"
         android:textColor="@color/toolBarText"
+        android:textSize="@dimen/blue_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

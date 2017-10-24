@@ -2,7 +2,6 @@
     <string name="app_name">FUNney-Android</string>
     <string name="myQR">自分のQRコード</string>
     <string name="scanQR">Scan QR Code</string>
-
     <string name="homeValue">総資産 Total Asset Value</string>
     <string name="fny">FNY</string>
     <string name="featured_transaction">注目の取引</string>
@@ -31,5 +30,4 @@
     <string name="pay">▼ Request</string>
     <string name="continue_text">Continue</string>
     <string name="birthday_example">※例：1820年8月2日→18200802</string>
-
 </resources>

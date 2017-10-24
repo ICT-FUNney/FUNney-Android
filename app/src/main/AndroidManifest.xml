@@ -51,7 +51,10 @@
         </activity>
 
         <activity android:name=".UserPolicy" />
-        <activity android:name=".PayActivity" />
+        <activity
+            android:name=".PayActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RequestPay" />
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />

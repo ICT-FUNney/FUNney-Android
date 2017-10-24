@@ -1,69 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_pay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.funney.funney_android.PayActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
     <include
-        android:id="@+id/include"
-        layout="@layout/view_total_value" />
+        layout="@layout/app_bar_pay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/pay_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include">
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/orrange"
+        android:fitsSystemWindows="true"
+        android:textColor="#FFFFFF"
+        app:headerLayout="@layout/nav_header_nav"
+        app:menu="@menu/activity_nav_drawer" />
 
-        <Button
-            android:id="@+id/send"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
-            android:layout_gravity="start"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/send_button_color"
-            android:text="@string/send"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#f3a033"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/request"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
-            android:layout_gravity="end"
-            android:layout_marginLeft="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/request_button_color"
-            android:text="@string/pay"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#04a2ff"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="382dp"
-        android:layout_height="353dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        android:adjustViewBounds="false"
-        android:cropToPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logo" />
-</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>
