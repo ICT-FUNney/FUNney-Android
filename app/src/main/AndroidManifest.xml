@@ -16,26 +16,32 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="">
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
+
 
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Login">
             <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewAccount">
+
+        <activity android:name=".NewAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ShowQRActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -43,22 +49,36 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity android:name=".UserPolicy" />
-
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-        </intent-filter>
-
-        <activity android:name=".Pay" />
+        <activity android:name=".PayActivity" />
         <activity android:name=".RequestPay" />
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />
-        <activity android:name=".EditAccount" />
+        <activity android:name=".EditAccountActivity" />
+
         <activity android:name=".ScanQRActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ConfirmEditAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConfirmNewAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>

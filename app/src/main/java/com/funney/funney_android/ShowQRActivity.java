@@ -36,7 +36,8 @@ public class ShowQRActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplication(), "back click!!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplication(), PayActivity.class);
+                startActivity(intent);
             }
         });
 

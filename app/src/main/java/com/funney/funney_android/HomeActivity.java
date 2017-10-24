@@ -3,10 +3,7 @@ package com.funney.funney_android;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -18,24 +15,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
     private ViewPager pager;
-
     private int currentPage;
-
     private String orrange = "#F3A033";
     private String white = "#FFFFFF";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
 
         // ViewPager関連
         pager = (ViewPager) findViewById(R.id.home_pager);
@@ -85,10 +78,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         payButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent payIntent = new Intent(getApplication(), Pay.class);
+                Intent payIntent = new Intent(getApplication(), PayActivity.class);
+
                 startActivity(payIntent);
             }
         });
+
 
         // NavigationDrawer関連
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_home);
@@ -99,6 +94,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -143,7 +139,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_mining) {
             // Handle the camera action
         } else if (id == R.id.nav_edit_account) {
-            Intent intent = new Intent(getApplication(), EditAccount.class);
+            Intent intent = new Intent(getApplication(), EditAccountActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_agreement) {
             Intent intent = new Intent(getApplication(), UserPolicy.class);

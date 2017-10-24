@@ -60,7 +60,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/pay_button"
-        android:text="@string/pay"
+        android:text="@string/pay_button"
         android:textColor="@color/toolBarText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
