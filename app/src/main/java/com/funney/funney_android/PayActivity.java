@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.DialogFragment;
@@ -16,8 +17,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class PayActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class PayActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     private DialogFragment dialogFragment;
@@ -67,6 +69,12 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
         NavigationView navigationView = (NavigationView) findViewById(R.id.pay_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        // navigationDrawerのheaderにローカルに保存してあるユーザー名を表示
+        View header = navigationView.getHeaderView(0);
+        TextView userName = (TextView) header.findViewById(R.id.username_header);
+        SharedPreferences pref = getSharedPreferences("account_data", MODE_PRIVATE);
+        userName.setText(pref.getString("name", ""));
+
     }
 
 
@@ -103,6 +111,7 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
             return alert.create();
         }
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
