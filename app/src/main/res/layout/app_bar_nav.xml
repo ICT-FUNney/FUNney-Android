@@ -25,6 +25,7 @@
                 android:layout_gravity="center">
 
                 <ImageView
+                    android:contentDescription="@string/toolBar_funney"
                     android:id="@+id/imageButton"
                     android:layout_width="24dp"
                     android:layout_height="24dp"

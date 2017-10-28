@@ -33,4 +33,6 @@
     <string name="user_icon_description">ユーザーのアイコン</string>
     <string name="featured_image_description">取引の画像</string>
     <string name="featured_arrow">右矢印</string>
+    <string name="history_type">入or出</string>
+    <string name="toolBar_funney">toolBarのFUNneyアイコン</string>
 </resources>
