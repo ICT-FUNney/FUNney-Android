@@ -31,4 +31,6 @@
     <string name="continue_text">Continue</string>
     <string name="birthday_example">※例：1820年8月2日→18200802</string>
     <string name="user_icon_description">ユーザーのアイコン</string>
+    <string name="featured_image_description">取引の画像</string>
+    <string name="featured_arrow">右矢印</string>
 </resources>
