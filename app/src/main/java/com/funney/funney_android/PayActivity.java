@@ -130,7 +130,7 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
             Intent intent = new Intent(getApplication(), Question.class);
             startActivity(intent);
         } else if (id == R.id.nav_logout) {
-            Intent intent = new Intent(getApplication(), Login.class);
+            Intent intent = new Intent(getApplication(), LoginActivity.class);
             startActivity(intent);
         }
 
