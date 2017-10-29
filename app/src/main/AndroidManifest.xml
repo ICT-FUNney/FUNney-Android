@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Login">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
