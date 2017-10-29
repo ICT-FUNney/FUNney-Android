@@ -78,7 +78,6 @@
         android:hint="@string/input_password"
         android:inputType="textPassword"
         android:textSize="14sp"
-        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_id" />
