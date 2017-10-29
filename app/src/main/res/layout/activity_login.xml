@@ -12,12 +12,12 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/icon"
         android:rotation="25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/icon"/>
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/login_title"
