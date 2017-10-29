@@ -44,7 +44,7 @@ public class HelpOption extends AppCompatActivity {
         Button logoutButton = (Button)findViewById(R.id.logout);
         logoutButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent logoutIntent = new Intent(getApplication(), Login.class);
+                Intent logoutIntent = new Intent(getApplication(), LoginActivity.class);
                 startActivity(logoutIntent);
             }
         });
