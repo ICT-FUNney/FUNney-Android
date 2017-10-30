@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.funney.funney_android.SendContactActivity">
+    tools:context="com.funney.funney_android.Activity.SendContactActivity">
 
     <include layout="@layout/view_total_value"/>
 

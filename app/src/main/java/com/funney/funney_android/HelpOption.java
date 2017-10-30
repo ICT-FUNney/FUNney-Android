@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.funney.funney_android.Activity.EditAccountActivity;
+import com.funney.funney_android.Activity.LoginActivity;
+
 public class HelpOption extends AppCompatActivity {
 
     @Override

@@ -1,4 +1,4 @@
-package com.funney.funney_android;
+package com.funney.funney_android.Activity;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.funney.funney_android.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
