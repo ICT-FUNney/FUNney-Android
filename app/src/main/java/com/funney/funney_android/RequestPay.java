@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.funney.funney_android.Activity.ShowQRActivity;
+
 public class RequestPay extends AppCompatActivity {
 
     @Override

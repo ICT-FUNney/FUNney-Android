@@ -1,10 +1,11 @@
-package com.funney.funney_android;
+package com.funney.funney_android.Adapter;
 
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.widget.Button;
+
+import com.funney.funney_android.Fragment.FeaturedTransactionFragment;
+import com.funney.funney_android.Fragment.TransactionHistoryFragment;
 
 /**
  * Created by keita on 2017/10/22.

@@ -1,14 +1,14 @@
-package com.funney.funney_android;
+package com.funney.funney_android.Fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 
+import com.funney.funney_android.Adapter.HistoryAdapter;
+import com.funney.funney_android.R;
 import com.funney.funney_android.data.Transaction;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.funney.funney_android;
+package com.funney.funney_android.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.funney.funney_android.R;
 import com.funney.funney_android.data.Transaction;
 
 import java.util.List;
