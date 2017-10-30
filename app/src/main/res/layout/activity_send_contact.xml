@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.funney.funney_android.SendContactActivity">
 
+    <include layout="@layout/view_total_value"/>
+
     <android.support.v7.widget.ContentFrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
