@@ -11,14 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".Activity.HomeActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -27,7 +27,7 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,14 +35,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".NewAccountActivity">
+        <activity android:name=".Activity.NewAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".ShowQRActivity"
+            android:name=".Activity.ShowQRActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,42 +51,42 @@
 
         <activity android:name=".UserPolicy" />
         <activity
-            android:name=".PayActivity"
+            android:name=".Activity.PayActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RequestPay" />
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />
-        <activity android:name=".EditAccountActivity" />
+        <activity android:name=".Activity.EditAccountActivity" />
 
-        <activity android:name=".ScanQRActivity">
+        <activity android:name=".Activity.ScanQRActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".ConfirmEditAccountActivity"
+            android:name=".Activity.ConfirmEditAccountActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ConfirmNewAccountActivity"
+            android:name=".Activity.ConfirmNewAccountActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
 
         </activity>
-        <activity android:name=".RequestActivity">
+        <activity android:name=".Activity.RequestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
 
         </activity>
-        <activity android:name=".SendContactActivity">
+        <activity android:name=".Activity.SendContactActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

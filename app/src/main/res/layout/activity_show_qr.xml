@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5F5F5F"
-    tools:context="com.funney.funney_android.ShowQRActivity">
+    tools:context="com.funney.funney_android.Activity.ShowQRActivity">
 
     <include
         android:id="@+id/toolbar"

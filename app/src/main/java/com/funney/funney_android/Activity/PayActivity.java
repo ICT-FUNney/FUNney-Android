@@ -1,4 +1,4 @@
-package com.funney.funney_android;
+package com.funney.funney_android.Activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -19,6 +19,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.funney.funney_android.Question;
+import com.funney.funney_android.R;
+import com.funney.funney_android.UserPolicy;
 
 public class PayActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

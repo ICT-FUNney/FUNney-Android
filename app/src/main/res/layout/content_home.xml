@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.funney.funney_android.HomeActivity"
+    tools:context="com.funney.funney_android.Activity.HomeActivity"
     tools:showIn="@layout/app_bar_nav">
 
 
@@ -34,7 +34,7 @@
 
             <fragment
                 android:id="@+id/menuFragment"
-                android:name="com.funney.funney_android.ButtonFragment"
+                android:name="com.funney.funney_android.Fragment.ButtonFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/button_fragment" />

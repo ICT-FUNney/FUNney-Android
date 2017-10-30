@@ -1,7 +1,9 @@
-package com.funney.funney_android;
+package com.funney.funney_android.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.funney.funney_android.R;
 
 public class SendContactActivity extends AppCompatActivity {
 
