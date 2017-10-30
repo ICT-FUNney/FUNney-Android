@@ -12,7 +12,10 @@ public class RequestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
-
+        android.support.v7.app.ActionBar actionbar = getSupportActionBar();
+        // 5.0以上でのToolbarの影消し
+        actionbar.setElevation(0f);
+        setTitle("Request Money");
 
         Button ScanButton = (Button) findViewById(R.id.Scan);
         ScanButton.setOnClickListener(new View.OnClickListener()
