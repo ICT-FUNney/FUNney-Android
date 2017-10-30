@@ -39,4 +39,7 @@
     <string name="nice_phrase">いい感じのフレーズ</string>
     <string name="login">ログイン</string>
     <string name="first_time">初めての方はこちら</string>
+    <string name="id_hint">送り先学籍番号</string>
+    <string name="scan_a_qr">Scan a QR Code</string>
+
 </resources>

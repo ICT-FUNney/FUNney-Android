@@ -26,7 +26,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:gravity="bottom|end"
-            android:text="FNY"
+            android:text="@string/fny"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/send_money"
@@ -47,7 +47,7 @@
             android:ems="10"
             android:gravity="bottom|end"
             android:inputType="number"
-            android:paddingEnd="64dp"
+            android:paddingRight="64dp"
             android:textSize="24sp" />
     </android.support.v7.widget.ContentFrameLayout>
 
@@ -63,7 +63,7 @@
         android:drawableLeft="@drawable/person_icon_item"
         android:ems="10"
         android:gravity="bottom|end"
-        android:hint="送り先学籍番号"
+        android:hint="@string/id_hint"
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,10 +79,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="43dp"
-        android:background="#F3A033"
-        android:text="▲Send"
+        android:background="@drawable/round_orange_button"
+        android:text="@string/send"
         android:textColor="#FFFFFF"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/send_number" />

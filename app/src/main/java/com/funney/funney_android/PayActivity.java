@@ -37,7 +37,7 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
 
         {
             public void onClick(View v) {
-                Intent requestIntent = new Intent(getApplication(), RequestPay.class);
+                Intent requestIntent = new Intent(getApplication(), RequestActivity.class);
                 startActivity(requestIntent);
             }
         });
@@ -102,7 +102,7 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
                         startActivity(sendIntent);
                         //}
                     } else {
-                        Intent scanIntent = new Intent(getActivity().getApplication(), ScanQRActivity.class);
+                        Intent scanIntent = new Intent(getActivity().getApplication(), SendContactActivity.class);
                         startActivity(scanIntent);
                     }
                 }
