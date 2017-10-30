@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 角丸付きの黒いグラデーションの背景(Shapeで書いてみた) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#585858"/>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/in"
+        android:top="5dp"
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"/>
+
+</layer-list>

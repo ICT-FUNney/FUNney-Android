@@ -2,6 +2,21 @@
     <string name="app_name">FUNney-Android</string>
     <string name="myQR">自分のQRコード</string>
     <string name="scanQR">Scan QR Code</string>
+    <string name="homeValue">総資産 Total Asset Value</string>
+    <string name="fny">FNY</string>
+    <string name="featured_transaction">注目の取引</string>
+    <string name="transaction_history">取引履歴</string>
+    <string name="pay_button">PAY</string>
+    <string name="title_activity_nav">Nav</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="mining">マイニング</string>
+    <string name="edit_account">アカウント情報変更</string>
+    <string name="agreement">利用規約</string>
+    <string name="question">よくある質問</string>
+    <string name="logout">ログアウト</string>
+    <string name="funney">FUNney</string>
     <string name="confirm">Confirm</string>
     <string name="create">Create</string>
     <string name="user_id">学籍番号</string>
@@ -15,11 +30,16 @@
     <string name="pay">▼ Request</string>
     <string name="continue_text">Continue</string>
     <string name="birthday_example">※例：1820年8月2日→18200802</string>
+    <string name="user_icon_description">ユーザーのアイコン</string>
+    <string name="featured_image_description">取引の画像</string>
+    <string name="featured_arrow">右矢印</string>
+    <string name="history_type">入or出</string>
+    <string name="toolBar_funney">toolBarのFUNneyアイコン</string>
     <string name="icon">FUNney_icon</string>
     <string name="nice_phrase">いい感じのフレーズ</string>
-    <string name="title">FUNney</string>
-    <string name="input_password">パスワード</string>
     <string name="login">ログイン</string>
     <string name="first_time">初めての方はこちら</string>
-    <string name="student_number">学籍番号</string>
+    <string name="id_hint">送り先学籍番号</string>
+    <string name="scan_a_qr">Scan a QR Code</string>
+
 </resources>

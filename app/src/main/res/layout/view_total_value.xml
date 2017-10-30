@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F3A033"
+    android:orientation="vertical"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:text="@string/homeValue"
+        android:textColor="@color/toolBarText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/total_asset_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@+id/fny_text"
+            android:layout_alignBottom="@+id/fny_text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="1234"
+            android:textColor="@color/toolBarText"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fny_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/total_asset_value"
+            android:layout_toRightOf="@+id/total_asset_value"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/fny"
+            android:textColor="@color/toolBarText"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,116 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.funney.funney_android.HomeActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
+    <include
+        layout="@layout/app_bar_nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="289dp"
-        android:layout_height="146dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="320dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.135" />
-
-    <TextView
-        android:id="@+id/textView2"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="利用可能コイン："
-        android:textColor="#000000"
-        android:textSize="17sp"
-        tools:layout_editor_absoluteY="16dp"
-        android:layout_marginLeft="152dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/orrange"
+        android:fitsSystemWindows="true"
+        android:textColor="#FFFFFF"
+        app:headerLayout="@layout/nav_header_nav"
+        app:menu="@menu/activity_nav_drawer" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="取引履歴"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        android:layout_marginLeft="152dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="69dp"
-        android:text="マイニング"
-        app:layout_constraintRight_toLeftOf="@+id/help"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        android:layout_marginBottom="101dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/help"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ヘルプ"
-        android:layout_marginRight="52dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="101dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/pay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="69dp"
-        android:layout_marginTop="8dp"
-        android:text="Pay"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintHorizontal_bias="0.745"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/showQR"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/showQR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginTop="8dp"
-        android:text="QR"
-        app:layout_constraintBottom_toTopOf="@+id/help"
-        app:layout_constraintVertical_bias="1.0"
-        android:layout_marginRight="52dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteY="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView2"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+</android.support.v4.widget.DrawerLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+

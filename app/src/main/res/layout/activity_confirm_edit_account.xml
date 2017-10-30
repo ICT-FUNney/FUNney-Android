@@ -27,6 +27,7 @@
         android:background="@drawable/confirm_account_button"
         android:text="@string/confirm"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/blue_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

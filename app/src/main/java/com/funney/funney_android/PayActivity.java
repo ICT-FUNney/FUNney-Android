@@ -4,14 +4,23 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class PayActivity extends AppCompatActivity {
+public class PayActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     private DialogFragment dialogFragment;
@@ -28,7 +37,7 @@ public class PayActivity extends AppCompatActivity {
 
         {
             public void onClick(View v) {
-                Intent requestIntent = new Intent(getApplication(), RequestPay.class);
+                Intent requestIntent = new Intent(getApplication(), RequestActivity.class);
                 startActivity(requestIntent);
             }
         });
@@ -47,6 +56,26 @@ public class PayActivity extends AppCompatActivity {
                 dialogFragment.show(flagmentManager, "alert dialog");
             }
         });
+
+        // NavigationDrawer関連
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_pay);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_pay);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        NavigationView navigationView = (NavigationView) findViewById(R.id.pay_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        // navigationDrawerのheaderにローカルに保存してあるユーザー名を表示
+        View header = navigationView.getHeaderView(0);
+        TextView userName = header.findViewById(R.id.username_header);
+        SharedPreferences pref = getSharedPreferences("account_data", MODE_PRIVATE);
+        userName.setText(pref.getString("name", ""));
+
     }
 
 
@@ -55,6 +84,7 @@ public class PayActivity extends AppCompatActivity {
         // アラートの選択肢のリスト
         private String[] menulist = {"Scan a QR Code", "Send to email or contact", "cancel"};
 
+        @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -71,20 +101,41 @@ public class PayActivity extends AppCompatActivity {
                         Intent sendIntent = new Intent(getActivity().getApplication(), ShowQRActivity.class);
                         startActivity(sendIntent);
                         //}
-                    } else if (idx == 1) {
-                        Intent scanIntent = new Intent(getActivity().getApplication(), ScanQRActivity.class);
-                        startActivity(scanIntent);
                     } else {
-                        // nothing to do
+                        Intent scanIntent = new Intent(getActivity().getApplication(), SendContactActivity.class);
+                        startActivity(scanIntent);
                     }
                 }
             });
 
             return alert.create();
         }
-
-
     }
 
-    //setTitle("FUNney");
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_mining) {
+            // Handle the camera action
+        } else if (id == R.id.nav_edit_account) {
+            Intent intent = new Intent(getApplication(), EditAccountActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_agreement) {
+            Intent intent = new Intent(getApplication(), UserPolicy.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_question) {
+            Intent intent = new Intent(getApplication(), Question.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_logout) {
+            Intent intent = new Intent(getApplication(), LoginActivity.class);
+            startActivity(intent);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_pay);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }

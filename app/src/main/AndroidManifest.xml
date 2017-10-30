@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".HomeActivity">
+        <activity
+            android:name=".HomeActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -47,7 +50,10 @@
         </activity>
 
         <activity android:name=".UserPolicy" />
-        <activity android:name=".PayActivity" />
+        <activity
+            android:name=".PayActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RequestPay" />
         <activity android:name=".HelpOption" />
         <activity android:name=".Question" />
@@ -69,6 +75,18 @@
         <activity
             android:name=".ConfirmNewAccountActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".RequestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".SendContactActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
