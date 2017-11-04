@@ -20,7 +20,7 @@ public class Transaction {
         return timestamp;
     }
 
-    public String toString() {
+    public String valueString() {
         return String.valueOf(this.value);
     }
 

@@ -2,6 +2,7 @@ package com.funney.funney_android.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,13 +35,13 @@ public class TransactionHistoryFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        ListView list = (ListView) getActivity().findViewById(R.id.transacsion_history_list);
+        RecyclerView list = getActivity().findViewById(R.id.transacsion_history_list);
         ArrayList<Transaction> trlist = new ArrayList<Transaction>();
         for (int i = 0; i < 30; i++) {
             String str = String.valueOf(i);
             trlist.add(new Transaction(str, str, i));
         }
-        HistoryAdapter adapter = new HistoryAdapter(getContext(), trlist);
+        RecyclerView.Adapter adapter = new HistoryAdapter(getContext(), trlist);
         list.setAdapter(adapter);
 
     }
