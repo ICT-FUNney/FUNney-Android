@@ -41,7 +41,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         TextView name;
         ImageView img;
         TextView value;
-        TextView partition;
+
 
         ViewHolder(View v) {
             super(v);
@@ -49,7 +49,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
              name = (TextView) v.findViewById(R.id.history_name);
              img = (ImageView) v.findViewById(R.id.history_image);
              value = (TextView) v.findViewById(R.id.history_value);
-             partition = (TextView) v.findViewById(R.id.partition);
         }
     }
 
@@ -65,8 +64,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         // create a new view
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.view_history, parent, false);
-
-        // set the view's size, margins, paddings and layout parameters
 
         ViewHolder vh = new ViewHolder(view);
         return vh;
@@ -89,38 +86,5 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         return transactions.size();
     }
 
-    //@Override
-    //public View getView(int position, View convertView, ViewGroup parent) {
-    //    Transaction transaction = this.transactions.get(position);
-    //    if (convertView == null) {
-    //        convertView = this.inflater.inflate(R.layout.view_history, null);
-    //    }
-    //    TextView timestamp = (TextView) convertView.findViewById(R.id.history_date);
-    //    TextView name = (TextView) convertView.findViewById(R.id.history_name);
-    //    ImageView img = (ImageView) convertView.findViewById(R.id.history_image);
-    //    TextView value = (TextView) convertView.findViewById(R.id.history_value);
-    //    TextView partition = (TextView) convertView.findViewById(R.id.partition);
-//
-    //    LinearLayout partitionLayout = (LinearLayout) convertView.findViewById(R.id.partition_layout);
-//
-//
-    //    timestamp.setText(transaction.getTimestamp());
-    //    if (transaction.getTimestamp().equals("10")) {
-    //        img.setImageResource(R.drawable.transaction_history_icon_out);
-    //    } else {
-    //        img.setImageResource(R.drawable.transaction_history_icon_in);
-    //    }
-    //    value.setText(transaction.toString());
-    //    name.setText(transaction.getName());
-//
-    //    // 仕切り(partition)
-    //    if (transaction.getValue() % 10 == 0 && transaction.getValue() != 0) {
-    //        partitionLayout.setVisibility(View.VISIBLE);
-    //        partition.setText(String.valueOf(transaction.getValue()));
-    //    } else {
-    //        partitionLayout.setVisibility(View.GONE);
-    //    }
-//
-    //    return convertView;
-    //}
+
 }
