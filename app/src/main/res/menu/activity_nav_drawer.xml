@@ -5,6 +5,9 @@
         android:id="@+id/group_mining"
         android:checkableBehavior="none">
         <item
+            android:id="@+id/nav_homebutton"
+            android:title="@string/homebutton"/>
+        <item
             android:id="@+id/nav_mining"
             android:title="@string/mining" />
     </group>

@@ -136,6 +136,9 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
         } else if (id == R.id.nav_logout) {
             Intent intent = new Intent(getApplication(), LoginActivity.class);
             startActivity(intent);
+        } else if (id == R.id.nav_homebutton) {
+            Intent intent = new Intent(getApplication(), HomeActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_pay);
