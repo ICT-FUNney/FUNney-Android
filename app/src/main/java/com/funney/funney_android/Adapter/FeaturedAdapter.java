@@ -19,7 +19,7 @@ import java.util.List;
 
 public class FeaturedAdapter extends BaseAdapter {
     private LayoutInflater inflater;
-    private List<Transaction> transactions;
+    private List<Transaction> transactions; // 取引のリスト
 
     public FeaturedAdapter(Context context, List<Transaction> objects) {
         this.inflater = LayoutInflater.from(context);

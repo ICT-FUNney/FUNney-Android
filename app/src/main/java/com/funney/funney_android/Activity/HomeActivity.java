@@ -26,10 +26,10 @@ import com.funney.funney_android.UserPolicy;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ViewPager pager;
-    private int currentPage;
-    private String orrange = "#F3A033";
-    private String white = "#FFFFFF";
+    private ViewPager pager; // featuredTransactionとTransactionHistory
+    private int currentPage; // 現在表示しているリスト
+    private String orrange = "#F3A033"; // ボタンの色（オレンジ）
+    private String white = "#FFFFFF"; // ボタンの色（白）
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,6 +146,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        /**
+         * サイドバーのメニューを押した時の処理
+         */
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 

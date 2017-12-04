@@ -22,7 +22,7 @@ import java.util.List;
 
 public class HistoryAdapter extends BaseAdapter {
     private LayoutInflater inflater;
-    private List<Transaction> transactions;
+    private List<Transaction> transactions; // トランザクションのリスト
 
     public HistoryAdapter(Context context, List<Transaction> objects) {
         this.inflater = LayoutInflater.from(context);
@@ -57,7 +57,6 @@ public class HistoryAdapter extends BaseAdapter {
         TextView partition = (TextView) convertView.findViewById(R.id.partition);
 
         LinearLayout partitionLayout = (LinearLayout) convertView.findViewById(R.id.partition_layout);
-
 
         timestamp.setText(transaction.getTimestamp());
         if (transaction.getTimestamp().equals("10")) {

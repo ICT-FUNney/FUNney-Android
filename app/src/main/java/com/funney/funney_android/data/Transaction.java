@@ -5,6 +5,11 @@ package com.funney.funney_android.data;
  */
 
 public class Transaction {
+    /**
+     * 取引データのオブジェクト
+     * 仕様がかたまり次第変更
+     */
+
     private String timestamp;
     private String name;
     private int value;
