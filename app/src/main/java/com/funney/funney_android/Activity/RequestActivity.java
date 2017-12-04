@@ -19,6 +19,8 @@ public class RequestActivity extends AppCompatActivity {
         actionbar.setElevation(0f);
         setTitle("Request Money");
 
+        // スキャン画面に遷移
+        //          ↓SCAN A QR CODEボタンと関連付ける変数
         Button ScanButton = (Button) findViewById(R.id.Scan);
         ScanButton.setOnClickListener(new View.OnClickListener()
 
@@ -29,6 +31,8 @@ public class RequestActivity extends AppCompatActivity {
             }
         });
 
+        // QR画面に遷移
+        //           ↓▼REQUESTと関連付ける変数
         Button requestButton = (Button) findViewById(R.id.RequestButton);
         requestButton.setOnClickListener(new View.OnClickListener()
 
