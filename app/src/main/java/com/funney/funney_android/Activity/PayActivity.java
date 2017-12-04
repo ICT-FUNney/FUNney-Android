@@ -35,17 +35,20 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
 
-
+         //requestボタンを押したときの処理
         Button requestButton = (Button) findViewById(R.id.request);
         requestButton.setOnClickListener(new View.OnClickListener()
 
         {
             public void onClick(View v) {
+
+                //RequestActivity.classに画面遷移
                 Intent requestIntent = new Intent(getApplication(), RequestActivity.class);
                 startActivity(requestIntent);
             }
         });
 
+         //sendボタンを押したときの処理
         Button sendButton = (Button) findViewById(R.id.send);
         sendButton.setOnClickListener(new View.OnClickListener() {
 
@@ -94,18 +97,19 @@ public class PayActivity extends AppCompatActivity implements NavigationView.OnN
 
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
+            //アラートのタイトル
             //alert.setTitle("How would you like to send money?");
             alert.setItems(menulist, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int idx) {
 
-                    // アラートの選択肢
+                    // アラートの選択肢を押したときの処理
                     if (idx == 0) {
-                        //アラートを押したら画面遷移
+                        //アラートを押したらShowQRActivity.classに画面遷移
                         Intent sendIntent = new Intent(getActivity().getApplication(), ShowQRActivity.class);
                         startActivity(sendIntent);
                         //}
-                    } else {
+                    } else {//アラートを押したらSendContactActivity.classに画面遷移
                         Intent scanIntent = new Intent(getActivity().getApplication(), SendContactActivity.class);
                         startActivity(scanIntent);
                     }
